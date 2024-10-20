@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Selected Columns Data</title>
+</head>
+<body>
+    <h1>Selected Columns Data</h1>
+    <div>
+        {{ data|safe }}
+    </div>
+    
+    <h2>Estimated Epsilon (eps) for DBSCAN</h2>
+    <p>Estimated eps: {{ eps_estimate }}</p>
+    <p>Knee point of k-distance plot: {{ knee_point }}</p>
+</body>
+</html>
