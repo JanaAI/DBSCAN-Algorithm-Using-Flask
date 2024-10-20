@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Epsilon and Min_Pts Results</title>
+    <style>
+        .image-container {
+            display: flex;
+            justify-content: space-around;
+            gap: 20px;
+        }
+        .image-container img {
+            width: 80%;
+            max-width: 800px; 
+            height: auto;
+        }
+        .image-container {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Clustering Results</h1>
+    <p><strong>Optimal Epsilon:</strong> {{ epsilon }}</p>
+    <p><strong>Min_Pts:</strong> {{ min_pts }}</p>
+    <div class="image-container">
+        <div>
+            <h2>K-Distance Graph with Knee Point:</h2>
+            <img src="{{ k_distance_graph_url }}" alt="K-Distance Graph">
+        </div>
+        <div>
+            <h2>Cluster Graph:</h2>
+            <img src="{{ cluster_graph_url }}" alt="Cluster Graph">
+        </div>
+    </div>
+    <a href="/">Go Back</a>
+</body>
+</html>
