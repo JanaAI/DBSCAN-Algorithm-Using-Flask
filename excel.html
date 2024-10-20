@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSV File</title>
+</head>
+<body>
+   {{data|safe}}
+</body>
+</html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Select Columns</title>
+</head>
+<form action="/calculate_epsilon" method="post">
+    <h3>Select Features for Clustering:</h3>
+    {% for column in columns %}
+        <input type="checkbox" name="features" value="{{ column }}">{{ column }}<br>
+    {% endfor %}
+    <button type="submit">Calculate Epsilon</button>
+</form>
+</html>
