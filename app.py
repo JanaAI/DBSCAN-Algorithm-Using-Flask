@@ -6,6 +6,7 @@ from sklearn.neighbors import NearestNeighbors
 import numpy as np
 import matplotlib.pyplot as plt
 from sklearn.metrics import silhouette_score
+from sklearn.datasets import make_blobs
 from kneed import KneeLocator
 import os
 import io
@@ -14,6 +15,7 @@ import base64
 app = Flask(__name__)
 
 app.config["UPLOAD_FOLDER1"] = "static/excel"
+
 
 @app.route("/", methods=['GET', 'POST'])
 def upload():
@@ -96,6 +98,7 @@ def calculate_epsilon():
                            min_pts=min_pts, 
                            k_distance_graph_url="/static/excel/k_distance_graph.png",
                            cluster_graph_url="/static/excel/cluster_graph.png")
+
 
 if __name__ == "__main__":
     app.run(debug=True)
